@@ -1,5 +1,5 @@
 if (doc.containsKey('population')) { 
-  return doc['population'].value 
+  return _score * log10(doc['population'].value +1)
 } else {
-  return 0
+  return _score
 }

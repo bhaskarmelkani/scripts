@@ -1,6 +1,6 @@
 if (doc.containsKey('_type')) {
   type=doc['_type'].value;
-  return ( type in weights ) ? weights[ type ] : 0 
+  return ( type in weights ) ? _score * weights[ type ] : _score 
 } else { 
-  return 0 
+  return _score
 }
